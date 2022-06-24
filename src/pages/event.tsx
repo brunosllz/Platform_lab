@@ -1,4 +1,5 @@
 import { useParams } from "react-router-dom";
+
 import { Header } from "../components/Header";
 import { SideBar } from "../components/SideBar";
 import { Video } from "../components/Video";
@@ -13,6 +14,7 @@ export function Event() {
         {
           slug && <Video lessonSlug={slug} />
         }
+
         <SideBar />
       </main>
     </div>

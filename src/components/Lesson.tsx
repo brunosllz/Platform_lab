@@ -3,8 +3,6 @@ import { format, isPast } from 'date-fns';
 import ptBR from 'date-fns/locale/pt-BR'
 import { Link } from 'react-router-dom';
 
-
-
 interface LessonProps {
   title: string;
   slug: string;
