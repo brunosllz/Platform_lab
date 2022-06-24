@@ -21,8 +21,6 @@ export function Subscriber() {
   function handleSubscriber(event: FormEvent) {
     event.preventDefault();
 
-    console.log(name, email)
-
     createSubscriber({
       variables: {
         name,
