@@ -136,7 +136,10 @@ export function Video(props: VideoProps) {
           </a>
         </div>
       </div>
-      <Footer />
+
+      <div className="mt-12 max-w-[68.75rem] mx-auto px-8">
+        <Footer />
+      </div>
     </div>
   );
 }
