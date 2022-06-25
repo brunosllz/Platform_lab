@@ -7,21 +7,6 @@ import '@vime/core/themes/default.css'
 import { Footer } from "./Footer";
 import { CaretRight, CircleNotch, DiscordLogo, FileArrowDown, Image, Lightning } from "phosphor-react";
 
-const GET_LESSON_BY_SLUG_QUERY = gql`
-  query GetLessonBySlug($slug: String) {
-  lesson(where: {slug: $slug}) {
-    title
-    id
-    description
-    videoId
-    teacher {
-      name
-      bio
-      avatarURL
-    }
-  }
-}
-`
 
 interface GetLessonBySlugResponse {
   lesson: {

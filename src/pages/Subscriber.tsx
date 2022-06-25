@@ -4,30 +4,8 @@ import { useNavigate } from "react-router-dom";
 import { Footer } from "../components/Footer";
 import { Logo } from "../components/Logo";
 import { ReactLogo } from "../components/ReactLogo";
+import { useCreateSubscriberMutation, useGetSlugLessonsQuery } from "../graphql/generated";
 
-const CREATE_SUBSCRIBER_MUTATION = gql`
-  mutation createSubscriber ($name: String!, $email: String!) {
-    createSubscriber(data: {name: $name, email: $email}) {
-      id
-    }
-  }
-`;
-
-const GET_LESSONS_QUERY = gql`
-  query GetLessons {
-    lessons(orderBy: id_ASC) {
-      slug
-      id
-    }
-  }
-`
-
-interface GetLessons {
-  lessons: {
-    id: string;
-    slug: string;
-  }[]
-}
 
 export function Subscriber() {
   const navigate = useNavigate()
@@ -35,8 +13,8 @@ export function Subscriber() {
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
 
-  const [createSubscriber, { loading }] = useMutation(CREATE_SUBSCRIBER_MUTATION);
-  const { data } = useQuery<GetLessons>(GET_LESSONS_QUERY);
+  const [createSubscriber, { loading }] = useCreateSubscriberMutation();
+  const { data } = useGetSlugLessonsQuery();
 
   async function handleSubscriber(event: FormEvent) {
     event.preventDefault();

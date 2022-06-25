@@ -1,0 +1,6 @@
+query GetSlugLessons {
+    lessons(orderBy: id_ASC) {
+      slug
+      id
+    }
+  }
