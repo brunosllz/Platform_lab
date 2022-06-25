@@ -1,5 +1,6 @@
-import { gql, useMutation } from "@apollo/client";
+import { gql, useMutation, useQuery } from "@apollo/client";
 import { FormEvent, useState } from "react";
+import { useNavigate } from "react-router-dom";
 import { Footer } from "../components/Footer";
 import { Logo } from "../components/Logo";
 import { ReactLogo } from "../components/ReactLogo";
@@ -12,21 +13,42 @@ const CREATE_SUBSCRIBER_MUTATION = gql`
   }
 `;
 
+const GET_LESSONS_QUERY = gql`
+  query GetLessons {
+    lessons(orderBy: id_ASC) {
+      slug
+      id
+    }
+  }
+`
+
+interface GetLessons {
+  lessons: {
+    id: string;
+    slug: string;
+  }[]
+}
+
 export function Subscriber() {
-  const [createSubscriber] = useMutation(CREATE_SUBSCRIBER_MUTATION);
+  const navigate = useNavigate()
 
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
 
-  function handleSubscriber(event: FormEvent) {
+  const [createSubscriber, { loading }] = useMutation(CREATE_SUBSCRIBER_MUTATION);
+  const { data } = useQuery<GetLessons>(GET_LESSONS_QUERY);
+
+  async function handleSubscriber(event: FormEvent) {
     event.preventDefault();
 
-    createSubscriber({
+    await createSubscriber({
       variables: {
         name,
         email
       }
     });
+
+    navigate(`/event/lesson/${data?.lessons[0].slug}`);
   }
 
   return (
@@ -52,13 +74,13 @@ export function Subscriber() {
 
           <form onSubmit={handleSubscriber} className="flex flex-col gap-2 w-full">
             <input
-              className="bg-gray-900 rounded px-5 h-14"
+              className={`bg-gray-900 font-normal rounded px-5 h-14 outline-none transition-colors focus:ring-1 focus:ring-green-500 hover:ring-1 hover:ring-green-500`}
               type="text"
               placeholder="Seu nome completo"
               onChange={event => setName(event.target.value)}
             />
             <input
-              className="bg-gray-900 rounded px-5 h-14"
+              className="bg-gray-900 font-normal rounded px-5 h-14 outline-none transition-colors focus:ring-1 focus:ring-green-500 hover:ring-1 hover:ring-green-500"
               type="email"
               placeholder="Digite seu email"
               onChange={event => setEmail(event.target.value)}
@@ -66,7 +88,8 @@ export function Subscriber() {
 
             <button
               type="submit"
-              className=" mt-4 bg-green-500 uppercase py-4 rounded text-sm hover:bg-green-700 transitions-colors"
+              disabled={loading}
+              className=" mt-4 bg-green-500 uppercase py-4 rounded text-sm hover:bg-green-700 transitions-colors disabled:opacity-50"
             >
               garantir minha vaga
             </button>
