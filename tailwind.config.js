@@ -5,6 +5,9 @@ module.exports = {
   ],
   theme: {
     extend: {
+      screens: {
+        '2xl': { 'max': '1024px' }
+      },
       backgroundImage: {
         blur: 'url(/src/assets/blur-background.png)'
       },
