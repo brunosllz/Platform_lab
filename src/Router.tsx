@@ -1,5 +1,5 @@
 import { Route, Routes, } from "react-router-dom";
-import { Event } from "./foldertest/Event";
+import { Event } from "./pages/Event";
 
 import { Subscriber } from "./pages/Subscriber";
 
