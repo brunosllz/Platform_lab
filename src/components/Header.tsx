@@ -27,11 +27,17 @@ export function Header({ toggleMenu, setToggleMenu }: HeaderProps) {
 
       {toggleMenu ? (
         <nav className="overflow-scroll lg:hidden pb-20 z-[100] fixed top-[4.6875rem] right-0 w-full h-full bg-gray-700 translate-x-0 transition-all duration-500 ease-in-out">
-          <SideBar />
+          <SideBar
+            setToggleMenu={setToggleMenu}
+            toggleMenu={toggleMenu}
+          />
         </nav>
       ) : (
         <nav className="z-[100] fixed top-[4.6875rem] right-0 w-full h-full bg-gray-700 translate-x-full transition-all duration-500 ease-in-out">
-          <SideBar />
+          <SideBar
+            setToggleMenu={setToggleMenu}
+            toggleMenu={toggleMenu}
+          />
         </nav>
       )
       }
