@@ -5,7 +5,7 @@ import { Header } from "../components/Header";
 import { SideBar } from "../components/SideBar";
 import { Video } from "../components/Video";
 
-export default function Event() {
+export function Event() {
   const { slug } = useParams<{ slug: string }>();
   const [toggleMenu, setToggleMenu] = useState(false);
 
