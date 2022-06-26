@@ -1,5 +1,5 @@
 import ptBR from 'date-fns/locale/pt-BR'
-import { format, isPast } from 'date-fns';
+import { format, isPast, set } from 'date-fns';
 import { Link, useParams } from 'react-router-dom';
 import classNames from 'classnames'
 
@@ -10,6 +10,8 @@ interface LessonProps {
   slug: string;
   availableAt: Date;
   type: "live" | "class"
+  setToggleMenu: (toggleMenu: boolean) => void;
+  toggleMenu: boolean;
 }
 
 export function Lesson(props: LessonProps) {
@@ -22,8 +24,17 @@ export function Lesson(props: LessonProps) {
 
   const isActiveLesson = slug === props.slug;
 
+  function handleCloseSidebar(event: React.MouseEvent) {
+    props.setToggleMenu(props.toggleMenu);
+    !isLessonAvailable && event.preventDefault();
+  }
+
   return (
-    <Link to={`/event/lesson/${props.slug}`} className='group'>
+    <Link
+      to={`/event/lesson/${props.slug}`}
+      className={`group ${!isLessonAvailable && "hover:cursor-not-allowed"}`}
+      onClick={handleCloseSidebar}
+    >
       <span className="text-gray-300 capitalize">
         {availableAtFormatted}
       </span>
