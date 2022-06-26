@@ -25,8 +25,8 @@ export function Lesson(props: LessonProps) {
   const isActiveLesson = slug === props.slug;
 
   function handleCloseSidebar(event: React.MouseEvent) {
-    props.setToggleMenu(props.toggleMenu);
     !isLessonAvailable && event.preventDefault();
+    props.setToggleMenu(!props.toggleMenu);
   }
 
   return (
