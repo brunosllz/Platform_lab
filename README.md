@@ -68,6 +68,7 @@ As seguintes ferramentas foram usadas na construção do projeto:
 - Graphcms
 - Vime
 - GraphQL Code Generator
+- Lottie
 
 > Veja o arquivo [package.json](https://github.com/brunosllz/Platform_lab/blob/main/package.json)
 ---
