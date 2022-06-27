@@ -24,7 +24,7 @@ export function Subscriber() {
       }
     });
 
-    navigate('/event');
+    navigate(`/event/lesson/${data?.lessons[0].slug}`);
   }
 
   return (
