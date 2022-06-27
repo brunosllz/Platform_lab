@@ -13,7 +13,7 @@
   <a href="#--como-executar-o-projeto">Como executar</a> •
   <a href="#--layout">Layout</a> •
   <a href="#--tecnologias">Tecnologias</a> •
-  <a href="#--milhas-a-mais">Tecnologias</a> 
+  <a href="#--milhas-a-mais">Milhas a mais</a> 
 </p>
 
 <br/>
