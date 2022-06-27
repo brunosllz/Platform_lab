@@ -65,11 +65,8 @@ As seguintes ferramentas foram usadas na construção do projeto:
 - Typescript
 - Tailwindcss
 - Apollo Client Graphql
-- Phosphor icon
-- Date fns
+- Graphcms
 - Vime
-- React Router Dom
-- Classnames
 - GraphQL Code Generator
 
 > Veja o arquivo [package.json](https://github.com/brunosllz/Platform_lab/blob/main/package.json)
