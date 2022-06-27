@@ -67,7 +67,7 @@ export function Lesson(props: LessonProps) {
           </span>
         </header>
 
-        <strong className={` mt-5 block text-base transition-colors ${isActiveLesson ? 'text-white' : 'text-gray-200'}`}>
+        <strong className={`mt-5 block text-base transition-colors ${isActiveLesson ? 'text-white' : 'text-gray-200'}`}>
           {props.title}
         </strong>
       </div>

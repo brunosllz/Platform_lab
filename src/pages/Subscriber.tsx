@@ -37,9 +37,7 @@ export function Subscriber() {
 
       <div className="w-full max-w-[1216px] items-center justify-between mt-20 mx-auto z-10 md:flex-row md:flex">
         <div className="max-w-[640px] flex flex-col mx-6 items-center md:items-start">
-
           <Logo />
-
 
           <h1 className="mt-8 text-[1.875rem] leading-tight text-center md:text-left">
             Construa uma <strong className="text-blue-500">aplicação completa</strong>, do zero, com <strong className="text-blue-500">React JS</strong>
