@@ -9,7 +9,7 @@ module.exports = {
         '2xl': { 'max': '1024px' }
       },
       backgroundImage: {
-        blur: 'url(/src/assets/blur-background.png)'
+        blur: 'url(https://res.cloudinary.com/dhexs29hy/image/upload/v1656268811/Ignite_Lab/blur-background.png)'
       },
       fontFamily: {
         sans: 'Roboto, sans-serif'
