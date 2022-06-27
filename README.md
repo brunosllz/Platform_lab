@@ -4,7 +4,7 @@
 </h1>
 
 <h4 align="center">
-	🚧 Ignite Event Platform 🚧
+	🚧 Platform Lab 🚧
 </h4>
 
 <p align="center">
