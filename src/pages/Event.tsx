@@ -12,7 +12,7 @@ export function Event() {
   const [toggleMenu, setToggleMenu] = useState(false);
 
   return (
-    <div className={`flex flex-col min-h-screen overflow-y-hidden ${toggleMenu ? (document.body.classList.add('overflow-hidden')) : (document.body.classList.remove('overflow-hidden'))}`}>
+    <div className={`flex flex-col min-h-screen ${toggleMenu ? (document.body.classList.add('overflow-hidden')) : (document.body.classList.remove('overflow-hidden'))}`}>
       < Header
         setToggleMenu={setToggleMenu}
         toggleMenu={toggleMenu}
