@@ -22,7 +22,7 @@
 
 ## [](https://github.com/brunosllz/Platform_lab#--sobre-o-projeto) 💻 Sobre o projeto
 
-Projeto desenvoldido no Ignite Lab, como intuito de no final de uma semana apresentar uma plataforma de estudo/evento.
+Projeto desenvolvido no Ignite Lab, como intuito de no final de uma semana apresentar uma plataforma de estudo/evento.
 
 ---
 
