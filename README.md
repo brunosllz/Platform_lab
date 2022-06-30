@@ -30,7 +30,7 @@ Projeto desenvoldido no Ignite Lab, como intuito de no final de uma semana apres
 
 - Cadastro de Pessoa no evento
 - Listar aulas
-- Controlar a disnobilidade das aulas liberadas ao não
+- Controlar a disponibilidade das aulas liberadas ou não
 - Apresentar dados e vídeo de uma determinada aula
 
 ---
