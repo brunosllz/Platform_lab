@@ -75,5 +75,5 @@ As seguintes ferramentas foram usadas na construção do projeto:
 
 ## [](https://github.com/brunosllz/Platform_lab#--milhas-a-mais) 🚀 Milhas a mais 
 
-- [ x ] Reponsividade da aplicação
+- [x] Reponsividade da aplicação
 
