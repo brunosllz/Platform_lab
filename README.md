@@ -36,7 +36,7 @@ Projeto desenvolvido no Ignite Lab, como intuito de no final de uma semana apres
 
 #### 🧭 Rodando a aplicação
 
-Antes de iniciar o projeto devamos [criar a nossa API](https://rseat.in/lab-graphcms), você deverá criar ma conta no serviço **Graphcms** e clonar a API, em seguida, adicione as variáveis necessárias no arquivo `.env`, conforme o arquivo de exemplo `.env.example`.
+Antes de iniciar o projeto devamos [criar a nossa API](https://rseat.in/lab-graphcms), você deverá criar uma conta no serviço **Graphcms** e clonar a API, em seguida, adicione as variáveis necessárias no arquivo `.env`, conforme o arquivo de exemplo `.env.example`.
 
 ```bash
 # Clone este repositório
